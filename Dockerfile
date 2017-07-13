@@ -7,6 +7,6 @@ COPY ./yarn.lock .
 
 RUN yarn install --production --no-progress
 
-COPY ./dist .
+COPY ./build .
 
-CMD [ "node", "index.js" ]
+CMD [ "node", "server.js" ]
