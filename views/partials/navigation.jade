@@ -1,0 +1,14 @@
+.ui.menu
+    .ui.container
+        a.header.item(href='/')
+            img.logo(src='https://semantic-ui.com/examples/assets/images/logo.png')
+            | &nbsp;&nbsp;&nbsp;GeoIP map
+        a.header.item(href='/map') Map
+        a.header.item(href='/api') Api
+        a.header.item(href='/about') About
+        .right.menu
+            .item
+                .ui.icon.input
+                    input(type="text" placeholder="Enter ip...")
+                    i.search.link.icon
+            a.header.item(href='/map') Login
