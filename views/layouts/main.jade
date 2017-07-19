@@ -3,10 +3,11 @@ html
     head
         title!= 'GeoIP map - ' + title || 'Page not found'
         link(href='https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css', rel='stylesheet')
-        link(href='/css/styles.css', rel='stylesheet')
+        link(href='/assets/app.css', rel='stylesheet')
     body
         include ../partials/navigation
         block content
         script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js')
         script(src='https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.js')
+        script(src='/assets/app.js')
         block scripts
