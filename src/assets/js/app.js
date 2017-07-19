@@ -24,4 +24,10 @@ $(function(){
         let ip = $('#nav .right.menu input').val();
         location.href = `/search/${ip}`;
     });
+    $('#nav .right.menu input').keyup((event)=>{
+        if(event.keyCode == 13){
+            let ip = $('#nav .right.menu input').val();
+            location.href = `/search/${ip}`;
+        }
+    });
 });
