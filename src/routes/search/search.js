@@ -5,7 +5,8 @@ const search = {
         let ipInfo = Maxmind.all(req.params.ip);
         res.render('pages/search', {
             title: req.params.ip,
-            ipInfo: ipInfo
+            ipInfo: ipInfo,
+            isIp: Maxmind.validateIp(req.params.ip)
         });
     }
 };
