@@ -16,6 +16,7 @@ const config = {
     entry: {
         app: "./src/assets/js/app.js",
         map: "./src/assets/js/map.js",
+        search: "./src/assets/js/search.js",
     },
     output: {
         path: path.join(__dirname, "public/assets"),
