@@ -4,12 +4,13 @@ const api = {
     single: (req, res) => {
         res.json(Maxmind.all(req.params.ip));
     },
-    group: (req, res) => {
+    group: async (req, res) => {
         let result = [];
-        req.body.ip.some((ip)=>{
-            result[ip] = Maxmind.all(ip);
-        });
-        console.log(result);
+        let ips = req.body.ip;
+        for(let ip in ips)
+        {
+            result[ips[ip]] = await Maxmind.all(ips[ip]);
+        }
         res.json(result);
     }
 };

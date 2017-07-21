@@ -9,7 +9,7 @@ dotenv.config();
 
 const app = express();
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(helmet());
 app.use(compression());
 app.disable('x-powered-by');

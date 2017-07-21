@@ -40,8 +40,8 @@ const Maxmind = {
     asn: (ip) => {
         return asnLookup.get(ip);
     },
-    all: (ip) => {
-        return {
+    all: async (ip) => {
+        return await {
             'country': countryLookup.get(ip),
             'city': cityLookup.get(ip),
             'asn': asnLookup.get(ip),
@@ -49,7 +49,10 @@ const Maxmind = {
     },
     validateIp: (ip) => {
         return maxmind.validate(ip);
-    }
+    },
+    /*ipArray: async (ips) => {
+
+    }*/
 };
 
 export default Maxmind;
